@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
+  },
   "devDependencies": {
     "css-loader": "^7.1.1",
     "html-loader": "^5.0.0",
