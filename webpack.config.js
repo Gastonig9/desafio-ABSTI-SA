@@ -1,0 +1,27 @@
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/main.js",
+  output: {
+    path: __dirname + "/dist",
+    filename: "bundle.js",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
+};

@@ -1,0 +1,136 @@
+.divider-jobTitle-contain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.divider-jobTitle-contain .line {
+  width: 20%;
+  height: 3px;
+  background-color: #eec643;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.divider-jobTitle-contain .line2 {
+  width: 25%;
+  height: 3px;
+  background-color: #eec643;
+}
+
+.jobDetail-contain {
+  background-color: #011638;
+  box-shadow: 0 2px 4px #eec643;
+  border-radius: 10px;
+}
+
+.jobDetail-contain .img-job {
+  height: 300px;
+}
+
+.jobDetail-contain .img-job img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jobDetail-contain .jobDetail-info {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 10px;
+  font-size: 18px;
+  color: #eec643;
+}
+
+.jobDetail-contain .jobDetail-info div {
+  background-color: #eef0f2;
+  color: #141414;
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.jobDetail-contain .jobDetail-description {
+  padding: 20px 20px;
+  font-size: 20px;
+}
+
+.jobDetail-contain .jobDetail-apply {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 20px;
+}
+
+.jobDetail-contain .jobDetail-apply .a-linkedin {
+  text-decoration: none;
+  font-size: 20px;
+  color: #eef0f2;
+  background-color: #1956fc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.jobDetail-contain .jobDetail-apply .a-mail {
+  text-decoration: none;
+  font-size: 20px;
+  color: #011638;
+  background-color: #eec643;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.jobDetail-contain .jobDetail-apply a:hover {
+  transform: translateY(-10px);
+  transition: all 1s ease;
+}
+
+/* LOADER */
+
+.loader-contain {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eef0f2;
+  position: relative; /* Añade posición relativa para el contenedor */
+}
+
+.loader-contain .loader {
+  width: 100%;
+  height: 4.8px;
+  display: inline-block;
+  position: absolute; /* Cambia a posición absoluta */
+  top: 50%; /* Coloca el loader en el centro vertical */
+  left: 50%; /* Coloca el loader en el centro horizontal */
+  transform: translate(-50%, -50%); /* Ajusta la posición */
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+.loader::after {
+  content: '';
+  width: 192px;
+  height: 4.8px;
+  background: #1956fc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
