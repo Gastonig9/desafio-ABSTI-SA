@@ -12,14 +12,12 @@ export default function homeController() {
   getJobs()
     .then((jobs) => {
       const simplifyJobs = jobs.latestJobs.slice(0, 3);
-      // Renderizar los trabajos una vez que se obtengan los datos
       renderJobs(simplifyJobs, jobContainer);
     })
     .catch((error) => {
       console.error("Error al obtener los trabajos:", error);
     })
     .finally(() => {
-      // Ocultar el loader después de que se complete la solicitud (independientemente del resultado)
       loader.style.display = "none";
     });
 

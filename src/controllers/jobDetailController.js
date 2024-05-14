@@ -8,20 +8,16 @@ export default function jobDetailController(jobTitle) {
 
   const jobDetailContainer = divElement.querySelector("#job-detail-container");
   const loader = divElement.querySelector("#loader");
-
-  // Mostrar loader mientras se realiza la solicitud a la API
   loader.style.display = "block";
 
   getJobByTitle(jobTitle)
     .then(jobDetail => {
-      // Renderizar los detalles del trabajo una vez que se obtengan los datos
       renderJobDetail(jobDetail, jobDetailContainer);
     })
     .catch(error => {
       console.error("Error al obtener el empleo:", error);
     })
     .finally(() => {
-      // Ocultar el loader después de que se complete la solicitud (independientemente del resultado)
       loader.style.display = "none";
     });
 
