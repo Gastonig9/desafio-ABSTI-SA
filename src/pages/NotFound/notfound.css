@@ -1,0 +1,43 @@
+.notfoundContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4e5c67;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: #f24d49;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #4e5c67;
+  margin-bottom: 2rem;
+}
+
+.link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

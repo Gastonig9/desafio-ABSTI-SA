@@ -134,3 +134,41 @@
     transform: translateX(0%);
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .jobDetail-contain .img-job {
+    height: 200px;
+  }
+
+  .jobDetail-contain .jobDetail-info {
+    width: 100%;
+    padding: 0px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .jobDetail-contain .jobDetail-info div {
+    height: auto;
+    padding: 0px;
+    background-color: #011638;
+    color: #eec643;
+  }
+
+  .jobDetail-contain .jobDetail-description {
+    font-size: 18px;
+  }
+
+  .jobDetail-contain .jobDetail-apply {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .jobDetail-contain .jobDetail-apply .a-linkedin,
+  .jobDetail-contain .jobDetail-apply .a-mail {
+    width: 100%;
+  }
+}

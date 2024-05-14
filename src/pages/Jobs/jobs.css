@@ -59,8 +59,35 @@
     border: none;
 }
 
-.search-jobs-contain button:hover{
+.search-jobs-contain button:hover {
     background-color: #011638;
     color: #EEC643;
     transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-jobs-contain input {
+        width: 60%;
+    }
+
+    .search-jobs-contain button {
+        width: 20%;
+    }
+}
+
+
+@media only screen and (max-width: 468px) {
+    .search-jobs-contain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-jobs-contain input {
+        width: 100%;
+    }
+
+    .search-jobs-contain button {
+        width: 80%;
+        font-size: 20px;
+    }
 }
